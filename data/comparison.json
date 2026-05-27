@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "title": "Plaid vs Finicity: Open Banking API Comparison",
+    "description": "Structured comparison of Plaid and Finicity (Mastercard) open banking APIs for financial data aggregation, account verification, and payment initiation.",
+    "version": "1.0.0",
+    "updated": "2026-05-26",
+    "source": "https://swifttechco.com/comparisons/plaid-vs-finicity-open-banking"
+  },
+  "platforms": {
+    "plaid": {
+      "name": "Plaid",
+      "vendor": "Plaid Inc.",
+      "founded": 2013,
+      "acquired_by": null,
+      "us_institution_coverage": "12,000+",
+      "international_coverage": ["UK", "Canada", "EU (select countries)"],
+      "website": "https://plaid.com",
+      "pricing_model": "Per API call / monthly active user"
+    },
+    "finicity": {
+      "name": "Finicity",
+      "vendor": "Mastercard (acquired 2020)",
+      "founded": 1999,
+      "acquired_by": "Mastercard",
+      "us_institution_coverage": "16,000+",
+      "international_coverage": ["Canada"],
+      "website": "https://www.finicity.com",
+      "pricing_model": "Per API call / volume-based"
+    }
+  },
+  "dimensions": [
+    {
+      "name": "US institution coverage",
+      "plaid":    { "rating": 5, "notes": "12,000+ US financial institutions; direct API connections for major banks; broad credit union coverage" },
+      "finicity": { "rating": 5, "notes": "16,000+ US institutions; broader coverage claim; Mastercard network relationships help enterprise deals" }
+    },
+    {
+      "name": "Developer experience",
+      "plaid":    { "rating": 5, "notes": "Best-in-class docs; Postman collections; Sandbox with realistic test data; SDKs for all major languages" },
+      "finicity": { "rating": 3, "notes": "Decent docs; less polished DX than Plaid; fewer community resources and examples" }
+    },
+    {
+      "name": "Account and identity verification",
+      "plaid":    { "rating": 5, "notes": "Auth, Identity, Assets; instant micro-deposit verification; real-time balance; KYC data extraction" },
+      "finicity": { "rating": 5, "notes": "Verification of Assets (VoA), Verification of Income (VoI); strong mortgage/lending use cases" }
+    },
+    {
+      "name": "Income and asset verification (lending)",
+      "plaid":    { "rating": 4, "notes": "Plaid Income (payroll and bank income); Assets for mortgage; improving but behind Finicity in lending" },
+      "finicity": { "rating": 5, "notes": "Market leader for mortgage and lending VoA/VoI; Fannie Mae / Freddie Mac approved; Day 1 Certainty" }
+    },
+    {
+      "name": "Payment initiation",
+      "plaid":    { "rating": 5, "notes": "Plaid Transfer (ACH); instant auth; RTP support; fraud signals; full payment flow API" },
+      "finicity": { "rating": 3, "notes": "Payment initiation available but less mature than Plaid; not primary use case" }
+    },
+    {
+      "name": "Fraud signals and risk data",
+      "plaid":    { "rating": 5, "notes": "Signal (ACH fraud risk score); Identity Verification; Monitor (transaction monitoring)" },
+      "finicity": { "rating": 3, "notes": "Basic fraud indicators; Mastercard network data an advantage but less product maturity" }
+    },
+    {
+      "name": "International support",
+      "plaid":    { "rating": 4, "notes": "UK, EU (limited), Canada; EU expansion ongoing; ahead of Finicity internationally" },
+      "finicity": { "rating": 2, "notes": "Primarily US and Canada; no EU support; international not a strategic focus" }
+    },
+    {
+      "name": "Enterprise and mortgage/lending fit",
+      "plaid":    { "rating": 4, "notes": "Strong general fintech; growing lending suite; used by Venmo, Robinhood, Betterment" },
+      "finicity": { "rating": 5, "notes": "Primary choice for mortgage lenders; GSE-approved; used by major lenders and title companies" }
+    },
+    {
+      "name": "Compliance and regulation",
+      "plaid":    { "rating": 5, "notes": "SOC 2 Type II, PCI DSS, GDPR, CCPA; transparent user-permissioned data consent model" },
+      "finicity": { "rating": 5, "notes": "SOC 2 Type II; Mastercard trust framework; strong compliance posture for regulated industries" }
+    },
+    {
+      "name": "Pricing transparency",
+      "plaid":    { "rating": 3, "notes": "Pricing not public; requires sales contact; startup-friendly tiers available" },
+      "finicity": { "rating": 2, "notes": "Enterprise pricing only; no public pricing; requires negotiation through Mastercard sales" }
+    },
+    {
+      "name": "SDK and integration quality",
+      "plaid":    { "rating": 5, "notes": "SDKs for Node.js, Python, Java, Go, Ruby; Link UI component for fast integration; React Native" },
+      "finicity": { "rating": 3, "notes": "REST API; fewer official SDKs; Connect (UI flow) available; integration requires more custom work" }
+    },
+    {
+      "name": "Startup ecosystem fit",
+      "plaid":    { "rating": 5, "notes": "De facto standard for US fintech startups; Plaid Exchange program; easy sandbox access" },
+      "finicity": { "rating": 2, "notes": "Enterprise-oriented; not designed for startup self-serve; longer sales cycle" }
+    }
+  ],
+  "use_case_recommendations": [
+    {
+      "use_case": "Consumer fintech app (budgeting, PFM, investing)",
+      "recommendation": "plaid",
+      "reason": "Best DX, Link UI component, large institution coverage, ACH transfer support"
+    },
+    {
+      "use_case": "Mortgage or home equity lending platform",
+      "recommendation": "finicity",
+      "reason": "GSE-approved VoA/VoI; Fannie Mae Day 1 Certainty; market standard for mortgage underwriting"
+    },
+    {
+      "use_case": "Startup building first open banking integration",
+      "recommendation": "plaid",
+      "reason": "Self-serve sandbox, excellent docs, startup pricing, fastest time to integration"
+    },
+    {
+      "use_case": "ACH payment initiation with fraud controls",
+      "recommendation": "plaid",
+      "reason": "Plaid Transfer with Signal fraud score is the most complete ACH solution"
+    },
+    {
+      "use_case": "Enterprise bank or credit union needing broadest US coverage",
+      "recommendation": "finicity",
+      "reason": "16,000+ institution coverage and Mastercard relationship for enterprise deals"
+    },
+    {
+      "use_case": "International expansion beyond North America",
+      "recommendation": "plaid",
+      "reason": "UK and EU support; Finicity has no European presence"
+    }
+  ],
+  "product_catalog": {
+    "plaid": ["Auth", "Transactions", "Identity", "Assets", "Income", "Transfer", "Signal", "Monitor", "Investments", "Liabilities", "Identity Verification", "Link"],
+    "finicity": ["Verification of Assets (VoA)", "Verification of Income (VoI)", "Account Owner", "Transactions", "Balances", "Connect (Link UI)", "Payment Initiation", "Cash Flow Analytics"]
+  }
+}
